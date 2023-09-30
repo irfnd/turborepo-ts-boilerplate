@@ -6,13 +6,20 @@
 	"license": "ISC",
 	"keywords": [],
 	"scripts": {
+		"prepare": "husky install",
 		"build": "turbo run build",
 		"dev": "turbo run dev",
 		"lint": "turbo run lint",
 		"format": "prettier --write \"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}\""
 	},
+	"lint-staged": {
+		"apps/**/*": "pnpm lint --filter=apps",
+		"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}": "prettier --write"
+	},
 	"devDependencies": {
 		"eslint": "^8.50.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^14.0.1",
 		"prettier": "^3.0.3",
 		"tsconfig": "workspace:*",
 		"turbo": "^1.10.14"
