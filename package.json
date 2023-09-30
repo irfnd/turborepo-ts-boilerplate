@@ -14,7 +14,7 @@
 	},
 	"lint-staged": {
 		"apps/**/*": "pnpm lint --filter=apps",
-		"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}": "prettier --write"
+		"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}": "pnpm format"
 	},
 	"devDependencies": {
 		"eslint": "^8.50.0",
