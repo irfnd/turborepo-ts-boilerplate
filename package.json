@@ -1,10 +1,19 @@
 {
-	"name": "turborepo-ts",
+	"name": "react-vite-ts-boilerplate",
+	"description": "A boilerplate/starter project for quickly building web using React with Vite and Typescript",
 	"version": "1.0.0",
-	"description": "",
-	"author": "Irfandi Iqbal Abimanyu",
-	"license": "ISC",
-	"keywords": [],
+	"author": "Irfnd <irfandiabimanyu@gmail.com>",
+	"license": "MIT",
+	"keywords": [
+		"typescript",
+		"monorepo",
+		"turborepo",
+		"prettier",
+		"husky",
+		"lint-staged",
+		"boilerplate"
+	],
+	"private": true,
 	"scripts": {
 		"prepare": "husky install",
 		"build": "turbo run build",
@@ -14,7 +23,7 @@
 	},
 	"lint-staged": {
 		"apps/**/*": "pnpm lint --filter=apps",
-		"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}": "pnpm format"
+		"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}": "prettier --write"
 	},
 	"devDependencies": {
 		"eslint": "^8.50.0",
