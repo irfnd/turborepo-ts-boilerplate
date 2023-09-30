@@ -1,0 +1,21 @@
+{
+	"name": "turborepo-ts",
+	"version": "1.0.0",
+	"description": "",
+	"author": "Irfandi Iqbal Abimanyu",
+	"license": "ISC",
+	"keywords": [],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"(apps|packages)/**/*.{ts,tsx,cjs,js,json,md}\""
+	},
+	"devDependencies": {
+		"eslint": "^8.50.0",
+		"prettier": "^3.0.3",
+		"tsconfig": "workspace:*",
+		"turbo": "^1.10.14"
+	},
+	"packageManager": "pnpm@8.8.0"
+}
